@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="title text-center">
+    <h2><span class="font-change">M</span>ovie <span class="font-change">W</span>izard</h2>
+  </div>
+  <div class="search mt-5">
+    <div class="input-group flex-nowrap" >
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" style="border-radius: 10px 0px 0px 10px" [(ngModel)]="movieName">
+      <span class="input-group-text" style="border-radius: 0px 10px 10px 0px"><img src="../../assets/search.svg" alt="" srcset=""></span>
+    </div>
+  </div>
+    <div class="row  ">
+      <div class="col-4 mt-3" *ngFor="let items of movieList | filter:movieName" >
+        <div class="card ">
+          <p class="movie-name">{{items.MovieName}}</p>
+          <iframe [src]="items.movieURL | safe:'resourceUrl'" frameborder="0"></iframe>
+           <p>Rating: {{items.star}}
+           </p>
+          <p>Release Date: {{items.ReleaseDate}}</p>
+        </div>
+      </div>
+    </div>
+
+
+</div>
