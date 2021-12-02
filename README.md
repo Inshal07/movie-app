@@ -4,4 +4,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-To server the web-app user need to install xampp server to run database.
+To server the web-app user need to install xampp server to run php server and database.
